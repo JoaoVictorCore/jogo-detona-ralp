@@ -28,8 +28,8 @@ const state = {
     }
   }
   
-  function playSound(audioName) {
-    let audio = new Audio(`/src/audio/${audioName}.mp3`);
+  function playSound() {
+    let audio = new Audio("./scr/audio/hit.mp3");
     audio.volume = 0.2;
     audio.play();
   }
@@ -52,7 +52,7 @@ const state = {
           state.values.result++;
           state.view.score.textContent = state.values.result;
           state.values.hitPosition = null;
-          playSound("hit");
+          playSound();
         }
       });
     });
